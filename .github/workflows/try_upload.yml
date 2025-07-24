@@ -26,11 +26,11 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: lint-log
-          path: /tmp
+          path: /logs
 
       - name: Print log
         run: |
-          ls /tmp
-          echo /tmp/hello_world.txt
-          echo /tmp/world.txt
+          ls /logs
+          cat /logs/hello_world.txt
+          cat /logs/world.txt
 
